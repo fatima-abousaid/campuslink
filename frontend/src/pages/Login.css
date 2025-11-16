@@ -1,39 +1,133 @@
-.login-container {
-  width: 350px;
-  margin: 80px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-}
-
-.login-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.login-container form {
+/* PAGE BACKGROUND */
+body {
+  background: linear-gradient(135deg, #eef2ff, #dbeafe);
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
-.login-container input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+/* FORM CONTAINER */
+.login-container {
+  width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: fadeIn 0.6s ease-out;
 }
 
-.login-container button {
-  padding: 10px;
+/* LOGO */
+.logo {
+   width: 110px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1e63e9;
   border: none;
-  background: #2d6cdf;
   color: white;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.login-container button:hover {
-  background: #1b4fb8;
+button:hover {
+  background: #144bb3;
+}
+
+/* PASSWORD */
+.password-wrapper {
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  right: 12px;
+  top: 13px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* OPTIONS */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap; 
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: #1e63e9;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+
+/* DIVIDER */
+.divider {
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
+  top: 50%;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* REGISTER */
+.register a {
+  color: #1e63e9;
+  text-decoration: none;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
